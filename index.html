@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+</head>
+<style>
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    body{
+        font-family: 'geometric', sans-serif;
+    }
+    nav{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        min-height: 8vh;
+        background-color: rgb(8, 8, 8);
+        color: white;
+        position:sticky;
+        top: 0;
+        z-index: 1000;
+    }
+    .logo{
+        margin-left: 20px;
+        font-size: 16px;
+        letter-spacing: 2px;
+    }
+    .hero{
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        align-items: center;
+        height: 100vh;
+        
+        background-image: url('Wave.png');
+        color: rgb(251, 251, 251);
+        background-size: contain;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: #050811;
+        margin-bottom: -80px;
+        background-color:black;
+        
+        
+    }
+    .hero h1{
+        margin-top: 20px;
+        font-family: 'Franklin Gothic Medium', sans-serif;
+        font-size: 40px;
+        color: #00e5ff;
+        
+    }
+    .hero p{
+        margin-top: 30px;
+        font-size: 15px;
+        text-align: center;
+        width: 90%;
+        text-transform: uppercase;
+        
+    }
+    
+    
+    .tagline {
+    align-self: flex-start;
+    margin: 30px 0 0 30px;
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 1.1;
+    padding: 18px;
+font-family: 'Arial Black', sans-serif;}
+
+.tagline span {
+    display: inline-flex;
+    width: 42px;
+    height: 45px;
+    background: white;
+    color: #343a44;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3px;
+font-family: 'Arial Black', sans-serif;
+}
+.event-details {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  width: 100%;
+  color: white;
+  font-size: 20px;
+  z-index: 2;
+  
+  
+}
+
+
+
+.event-details .label {
+  color: #00e5ff;
+  font-weight: bold;
+}
+.items{
+    display: flex;
+    gap: 20px;
+    color: rgb(241, 233, 233);
+    padding-right: 30px;
+}
+.items a{
+    color:rgb(170, 170, 173);
+    text-decoration: none;
+}
+.countdown {
+    height: 100vh;
+    background: #050811;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    background-image: url('https://pbs.twimg.com/ext_tw_video_thumb/2098516934572527628/pu/img/syOU6xps3r0MdZUm?format=webp&name=medium');
+    position: relative;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+        
+}
+
+.countdown h2 {
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.timer {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.timer div {
+    background: #101827;
+    border: 1px solid #00e5ff;
+    border-radius: 10px;
+    padding: 20px;
+    min-width: 100px;
+}
+
+.timer span {
+    font-size: 35px;
+    font-weight: bold;
+    color: #00e5ff;
+}
+
+.timer p {
+    margin-top: 8px;
+    color: white;
+}
+.register {
+    
+    background: #050811;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+    top:-60px;
+    background:transparent;
+    
+    
+}
+.register button {
+    background-color: #00e5ff;
+    color: #050811;
+    border: none;
+    padding: 15px 30px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    
+    
+}
+.register button:hover {
+    background-color: #00bcd4;
+}
+
+.about{
+    
+    color: white;
+    text-align:left;
+    margin-top: 30px;
+    
+    background:transparent;
+    align-self: flex-start;
+    
+    font-size: 17px;
+    font-weight: thin;
+    
+    padding: 18px;
+
+}
+.about h3{
+    font-size: 30px;
+    font-weight: thin;
+    margin-bottom: 10px;
+    font-family: 'Arial Black', sans-serif;
+    
+    
+}
+.about h3::after {
+    content: '';
+    display: block;
+    width: 250px;
+    height: 2px;
+    background-color: #00e5ff;
+    margin-top: 5px;
+}
+.about p{
+    margin-bottom: 10px;
+    line-height: 1.5;
+    font-weight: thin;
+}
+.about p2{
+    margin-top: 10px;
+    line-height: 1.5;
+    font-weight: bold;
+    color: #00e5ff;
+    font-family: 'Arial Black', sans-serif;
+}
+
+.hero-about {
+    position: absolute;
+    right: 3%;
+    top: 50%;
+    width: 35%;
+    color: white;
+    line-height: 1.2;
+}
+
+.hero-about h2 {
+    color: #00fbff;
+    font-size: 25px;
+    margin-bottom: 28px;
+    padding-bottom: 8px;
+    position: relative;
+}
+
+
+.hero-about p {
+    width: 100%;
+    text-align: left;
+    text-transform: none;
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 8px;
+    margin-top: 0px;
+}
+
+
+
+.hero-about h3 {
+    font-size: 16px;
+    margin-top: 15px;
+    color:#00fbff;
+}
+.hero-about h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 280px;
+    height: 2px;
+    background-color: #00e5ff;
+}
+
+
+.event-highlights {
+    min-height: 100vh;
+    padding: 25px 40px 35px;
+    background: black;
+    text-align: center;
+    color: white;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTJjKnjvCRI9ghCPxHOCFYl5-IHntXJgqbz2Hj_hRf6MsRH5XFbRwLRCOk&s=10');
+    background-size: contain;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-color: black;
+}
+
+.event-highlights h2 {
+    font-family: 'Permanent Marker', cursive;
+    font-size: 48px;
+    font-weight: 400;
+    letter-spacing: 2px;
+    color: #eafaff;
+    margin-bottom: 35px;
+    text-shadow: 0 0 18px rgba(0, 229, 255, 0.25);
+}
+.event-highlights h2::after {
+    content: "";
+    display: block;
+    width: 100px;
+    height: 3px;
+    margin: 14px auto 0;
+    background: #00e5ff;
+    border-radius: 5px;
+    box-shadow: 0 0 12px #00e5ff;
+}
+
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    min-height: 250px;
+    padding: 35px;
+    border: 1px solid #00e5ff;
+    border-radius: 15px;
+    background: #0b1220;
+    text-align: left;
+}
+.card h3 {
+    color: #5ce1f5;
+    text-align: center;
+    position: relative;
+    padding-bottom: 12px;
+    margin-bottom: 25px;
+}
+
+.card h3::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 2px;
+    background-color: #5ce1f5;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.card p {
+    text-align: center;
+    line-height: 1.8;
+    color: #d1dbe5;
+    font-size: 16px;
+    margin-top: 15px;
+}
+
+.event-highlights .event-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin-top: 35px;
+    color: white;
+    font-size: 18px;
+    flex-wrap: wrap;
+}
+
+
+
+.event-highlights .event-details .label {
+    color: #00e5ff;
+    font-weight: bold;
+}
+
+.event-highlights .event-details {
+    position: static;
+    transform: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+    margin-top: 35px;
+    padding-bottom: 20px;
+    color: white;
+    font-size: 18px;
+    flex-wrap: wrap;
+}
+
+
+</style>
+<body>
+   
+    <nav> 
+        <div class ="logo">GDG HACKHEIST</div>
+        <div class="items">
+            <a href="#">Home</a>
+            <a href="#">Events</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+        </div>
+
+
+    </nav>
+
+    <section class="hero">
+        <h1>Welcome to GDG HackHeist 2K26</h1>
+        <p>Join us for an exciting journey into the world of technology and innovation. Explore, learn, and connect with fellow enthusiasts!
+            
+        </p>
+        <div class="tagline">
+    <div><span>H</span>ack.</div>
+    <div><span>I</span>nnovate.</div>
+    <div><span>D</span>ominate.</div>
+    <div><span>E</span>liminate.</div>
+
+    
+
+    
+
+    </div>
+    
+    <div class="hero-about">
+    <h2>TURN YOUR IDEAS INTO IMPACT</h2>
+
+    <p>
+        Step into a world where creativity meets technology.
+        HackHeist 2026 brings together curious minds, passionate
+        developers, and future innovators to explore possibilities,
+        tackle challenges, and push the boundaries of what's possible.
+    </p>
+
+    <p class="hero-message">
+        Think creatively. Collaborate fearlessly. Build something extraordinary.
+    </p>
+
+    <h3>Your ideas. Your innovation. Your HackHeist.</h3>
+</div>
+
+        
+    </section>
+    <div class="countdown">
+        <h2>The Countdown Begins</h2>
+
+<div class="timer">
+    <div><span id="days">00</span><p>Days</p></div>
+    <div><span id="hours">00</span><p>Hours</p></div>
+    <div><span id="minutes">00</span><p>Minutes</p></div>
+    <div><span id="seconds">00</span><p>Seconds</p></div>
+</div>
+<div class="register">
+    
+    <button>Register Now</button>
+</div>
+<div class="about">
+    <h3>About</h3>
+    <p>Learn more about our upcoming event and what to expect!</p>
+    <p>HackHeist 2026 is an exciting opportunity for tech enthusiasts, aspiring developers, and creative minds to come together, exchange ideas, and explore innovative solutions to real-world challenges. Organized by GDG on Campus MIET, the event celebrates creativity, collaboration, and the power of technology.</p>
+    <p>Whether you're passionate about coding, problem-solving, or exploring new technologies, HackHeist is a chance to challenge yourself, learn something new, and turn your ideas into something meaningful.</p>
+    <p2>Think. Build. Innovate. Make your mark at HackHeist 2026.</p2>
+</div>
+
+    </div>
+    
+    <script>
+const eventDate = new Date("2026-10-16T09:00:00").getTime();
+
+function updateCountdown() {
+    const now = Date.now();
+    const distance = eventDate - now;
+
+    if (distance <= 0) {
+        document.querySelector(".timer").innerHTML =
+            "The event has started!";
+        clearInterval(timer);
+        return;
+    }
+
+    document.getElementById("days").textContent =
+        Math.floor(distance / 86400000);
+
+    document.getElementById("hours").textContent =
+        Math.floor((distance % 86400000) / 3600000);
+
+    document.getElementById("minutes").textContent =
+        Math.floor((distance % 3600000) / 60000);
+
+    document.getElementById("seconds").textContent =
+        Math.floor((distance % 60000) / 1000);
+}
+
+updateCountdown();
+const timer = setInterval(updateCountdown, 1000);
+
+</script>
+
+<section class="event-highlights">
+    <h2>EVENT HIGHLIGHTS</h2>
+
+    <div class="cards">
+        <div class="card">
+            <h3>Hackathon</h3>
+            <p>Put your skills to the test in an exciting coding challenge! Collaborate with creative minds, solve real-world problems, and turn innovative ideas into working solutions. Build, experiment, and compete to bring your vision to life at HackHeist 2026.</p>
+        </div>
+        <div class="card">
+            <h3>Workshops</h3>
+            <p>Learn by doing in interactive, hands-on workshops led by passionate tech enthusiasts. Explore new tools, develop practical skills, and gain valuable experience that you can use to bring your ideas to life.</p>
+        </div>
+        <div class="card">
+            <h3>Tech Sessions</h3>
+            <p>Discover the latest trends, technologies, and innovations shaping the future. Gain insights from experienced speakers, explore emerging opportunities in tech, and get inspired to think beyond the ordinary.</p>
+        </div>
+        <div class="card">
+            <h3>Networking</h3>
+            <p>Connect with developers, innovators, and like-minded students who share your passion for technology. Exchange ideas, build meaningful connections, discover collaboration opportunities, and grow your tech community at HackHeist 2026.</p>
+        </div>
+    </div>
+    
+<div class="event-details">
+    <div>
+        <span class="label">DATE:</span>
+        <span>16 October 2026</span>
+    </div>
+
+    <div>
+        <span class="label">VENUE:</span>
+        <span>MIET, Meerut</span>
+    </div>
+</div>
+
+</section>
+
+</body>
+</html>
