@@ -388,6 +388,133 @@ font-family: 'Arial Black', sans-serif;
     font-size: 18px;
     flex-wrap: wrap;
 }
+    
+
+@media (max-width: 600px) {
+
+    nav {
+        flex-wrap: wrap;
+        padding: 12px;
+        gap: 12px;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .items {
+        padding: 0;
+        gap: 12px;
+        flex-wrap: wrap;
+    }
+
+    .hero {
+        height: auto;
+        min-height: 100vh;
+        margin-bottom: 0;
+        padding: 20px 15px;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .hero p {
+        width: 100%;
+        font-size: 13px;
+        line-height: 1.6;
+    }
+
+    .tagline {
+        align-self: flex-start;
+        margin: 20px 0;
+        padding: 0;
+        font-size: 28px;
+    }
+
+    .tagline span {
+        width: 32px;
+        height: 34px;
+    }
+
+    .hero-about {
+        position: static;
+        width: 100%;
+        margin-top: 20px;
+    }
+
+    .hero-about h2 {
+        font-size: 21px;
+    }
+
+    .hero-about h2::after {
+        max-width: 100%;
+    }
+
+    .countdown {
+        height: auto;
+        min-height: 100vh;
+        padding: 35px 15px;
+    }
+
+    .timer {
+        gap: 10px;
+    }
+
+    .timer div {
+        min-width: 0;
+        width: calc(50% - 5px);
+        padding: 15px 8px;
+    }
+
+    .timer span {
+        font-size: 28px;
+    }
+
+    .about {
+        padding: 10px 0;
+        overflow-wrap: anywhere;
+    }
+
+    .event-highlights {
+        min-height: auto;
+        padding: 30px 15px;
+    }
+
+    .event-highlights h2 {
+        font-size: 32px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .card {
+        min-height: auto;
+        padding: 22px 15px;
+    }
+
+    .card h3::after {
+        max-width: 80%;
+    }
+
+    .card p {
+        font-size: 14px;
+        line-height: 1.7;
+    }
+
+    .event-highlights .event-details {
+        flex-direction: column;
+        gap: 15px;
+        font-size: 15px;
+        margin-top: 25px;
+    }
+}
+
 
 
 </style>
